@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "eeb1d16f-e0de-46c1-9f27-337af38822ec",
+		"name": "Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26872041",
+		"_collection_link": "https://www.postman.com/payload-administrator-63265336/workspace/test-1/collection/26872041-eeb1d16f-e0de-46c1-9f27-337af38822ec?action=share&creator=26872041&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Plase an ordered for pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"petId\": 184,\r\n  \"quantity\": 9,\r\n  \"shipDate\": \"2023-04-11T18:57:30.748Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/store/order",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"store",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find pourchase order by iD",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"petId\": 184,\r\n  \"quantity\": 9,\r\n  \"shipDate\": \"2023-04-11T18:57:30.748Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/store/order/{{order_id}}?order_ID=9223372036854769162",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"store",
+						"order",
+						"{{order_id}}"
+					],
+					"query": [
+						{
+							"key": "order_ID",
+							"value": "9223372036854769162"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return pet inventories by status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"petId\": 184,\r\n  \"quantity\": 9,\r\n  \"shipDate\": \"2023-04-11T18:57:30.748Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/store/inventory",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"store",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete pourchase order by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/store/order/{{order_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"store",
+						"order",
+						"{{order_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "order_id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

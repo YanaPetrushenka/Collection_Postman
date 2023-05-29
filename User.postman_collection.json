@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "5731c032-59f5-47aa-af27-f77c407dfd4c",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26872041",
+		"_collection_link": "https://www.postman.com/payload-administrator-63265336/workspace/test-1/collection/26872041-5731c032-59f5-47aa-af27-f77c407dfd4c?action=share&creator=26872041&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get user by username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/user/username?username=string",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"username"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"username\": \"yana\",\r\n  \"firstName\": \"petr\",\r\n  \"lastName\": \"yan\",\r\n  \"email\": \"yana@gmail.com\",\r\n  \"password\": \"987\",\r\n  \"phone\": \"111\",\r\n  \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/username",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"username"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/username?id=1&username=yana",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"username"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "username",
+							"value": "yana"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 2,\r\n  \"username\": \"yana\",\r\n  \"firstName\": \"petrush\",\r\n  \"lastName\": \"yana\",\r\n  \"email\": \"yana@gmail.com\",\r\n  \"password\": \"987\",\r\n  \"phone\": \"111\",\r\n  \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user with Array",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": 2,\r\n    \"username\": \"nikolas\",\r\n    \"firstName\": \"petrush\",\r\n    \"lastName\": \"nicolas\",\r\n    \"email\": \"nic@gmail.com\",\r\n    \"password\": \"321\",\r\n    \"phone\": \"333\",\r\n    \"userStatus\": 0\r\n  },\r\n  \r\n  {\r\n    \"id\": 4,\r\n    \"username\": \"alise\",\r\n    \"firstName\": \"petrush\",\r\n    \"lastName\": \"alise\",\r\n    \"email\": \"alise@gmail.com\",\r\n    \"password\": \"432\",\r\n    \"phone\": \"999\",\r\n    \"userStatus\": 0\r\n  },\r\n  \r\n  {\r\n    \"id\": 5,\r\n    \"username\": \"yanchik\",\r\n    \"firstName\": \"petrush\",\r\n    \"lastName\": \"yanik\",\r\n    \"email\": \"yanik@gmail.com\",\r\n    \"password\": \"543\",\r\n    \"phone\": \"767\",\r\n    \"userStatus\": 0\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/createWithArray",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"createWithArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user with List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": 9,\r\n    \"username\": \"ficus\",\r\n    \"firstName\": \"petrush\",\r\n    \"lastName\": \"ficus\",\r\n    \"email\": \"fic@gmail.com\",\r\n    \"password\": \"111\",\r\n    \"phone\": \"545\",\r\n    \"userStatus\": 0\r\n  },\r\n  \r\n  {\r\n    \"id\": 8,\r\n    \"username\": \"fern\",\r\n    \"firstName\": \"petrush\",\r\n    \"lastName\": \"fern\",\r\n    \"email\": \"fern@gmail.com\",\r\n    \"password\": \"545\",\r\n    \"phone\": \"090\",\r\n    \"userStatus\": 0\r\n  },\r\n  \r\n  {\r\n    \"id\": 7,\r\n    \"username\": \"calathea\",\r\n    \"firstName\": \"petrush\",\r\n    \"lastName\": \"calathea\",\r\n    \"email\": \"cala@gmail.com\",\r\n    \"password\": \"898\",\r\n    \"phone\": \"727\",\r\n    \"userStatus\": 0\r\n  }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/createWithList",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logs user into the system",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/login?calathea=898",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "calathea",
+							"value": "898"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
